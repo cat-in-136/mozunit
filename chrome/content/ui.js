@@ -312,7 +312,7 @@ function run() {
     try {
         var suite = {};
 
-        loader.loadSubScript(_('file').value, suite);
+        loader.loadSubscriptWithOptions(_('file').value, {target: suite, ignoreCache: true});
 
         var testsFound  = false;
 
